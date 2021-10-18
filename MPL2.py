@@ -13,7 +13,7 @@ try:
             if count >= 2 and count % 2 == 0:
                 plt.ion()
                 plt.clf()
-                plt.axis([0,16, -9,11])
+                plt.axis([0,16, -9,14])
                 plt.title(f'Frame {count // 2}')
                 plt.plot(data_x, data_y)
                 plt.draw()

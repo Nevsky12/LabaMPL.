@@ -9,8 +9,6 @@ def sum_arr(k):
     for i in range(k):
         sum_prep += prep_mark[:, i]
         sum_group += group_mark[:, i]
-        print(sum_prep)
-        print(sum_group)
     return sum_prep, sum_group
 
 
@@ -34,19 +32,21 @@ prep_mark = np.array([np.zeros(8) for i in range(7)])
 group_mark = np.array([np.zeros(8) for i in range(6)])
 x_preps = ["prep" + str(j + 1) for j in range(7)]
 x_groups = [str(750 + j + 1) for j in range(6)]
-
+print(prep_mark)
 
 for i in range(len(preps)):
 
     prep_mark[preps[i] - 1][scores[i] - 3] += 1
     group_mark[groups[i] - 1][scores[i] - 3] += 1
 
+print(prep_mark)
 
-axs[0].bar(x_preps, prep_mark[:, 0], label=str(3), color=colors[0])
-axs[1].bar(x_groups, group_mark[:, 0], label=str(3), color=colors[0])
+#
+# axs[0].bar(x_preps, prep_mark[:, 0], label=str(3), color=colors[0])
+# axs[1].bar(x_groups, group_mark[:, 0], label=str(3), color=colors[0])
 
 
-for i in range(1, 8):
+for i in range(0, 8):
     axs[0].bar(x_preps, prep_mark[:, i], bottom=sum_arr(i)[0], label=str(i + 3),
                color=colors[i])
     axs[1].bar(x_groups, group_mark[:, i], bottom=sum_arr(i)[1], label=str(i + 3),
