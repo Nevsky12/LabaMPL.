@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import time
-
+s = []
 data_x, data_y, count = [], [], 0
 try:
     with open("frames.dat.txt", "r") as file:
