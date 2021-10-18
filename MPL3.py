@@ -14,7 +14,7 @@ def sum_arr(k):
 
 fig, axs = plt.subplots(nrows=1, ncols=2)
 preps, scores, groups = [], [], []
-colors = ["#AF6600", "#FBBB00", "#FADB00", "#FCD700", "#FBBF00", "#DEFF00", "#9CBF00", "#6AAF00"]
+colors = ["#AF6700", "#FBBB00", "#FADB00", "#FCD700", "#FBBF00", "#DEFF00", "#9CBF00", "#6AAF00"]
 
 
 try:
